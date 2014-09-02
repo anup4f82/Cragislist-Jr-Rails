@@ -1,0 +1,7 @@
+<h2> Edit <%= @category.name %></h2>
+<%= form_for @category do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit "EDIT" %>
+<% end %>
+<h2><%= link_to "Home" , categories_path %> </h2>

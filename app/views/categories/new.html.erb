@@ -1,0 +1,16 @@
+<h2> Create New Category</h2>
+
+<% if @category.errors.any? %>
+	<% @category.errors.full_messages.each do |error| %>
+	<%= error %>
+	<% end %>
+<% end %>
+<%= form_for @category do |f| %>
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+ <%= f.submit "Create" %>
+
+
+<% end %>
+
+<h2><%= link_to "Home" , categories_path %> </h2>

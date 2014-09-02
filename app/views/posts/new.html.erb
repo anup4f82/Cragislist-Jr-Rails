@@ -1,0 +1,18 @@
+<h2>Create a New Post for <%= @category.name %></h2>
+<ul>
+<%= form_for [@category,@post] do |f| %>
+ <li>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+</li>
+<li>
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+</li>
+<li>
+	<%= f.submit %>
+</li>
+<% end %>
+</ul>
+
+<h2><%= link_to "Home" , categories_path %> </h2>
