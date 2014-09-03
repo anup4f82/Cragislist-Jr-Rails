@@ -1,5 +1,6 @@
 require 'spec_helper'
 
+
 describe  "Categories" ,:js=>true do
   let!(:category){FactoryGirl.create :category}
   let!(:post){FactoryGirl.create :post,:category => category}
